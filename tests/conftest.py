@@ -2,6 +2,13 @@ import numpy as np
 import pytest
 from timeseers import utils
 
+@pytest.fixture()
+def any_data(request):
+    np.random.seed(42)
+    n_changepoints = 1
+    data, delta = utils.trend_data(n_changepoints, noise=0.0001)
+    return data, delta, n_changepoints
+
 
 @pytest.fixture(params=[1, 5, 10])
 def trend_data(request):
