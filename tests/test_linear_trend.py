@@ -1,7 +1,8 @@
 from timeseers import LinearTrend
 import numpy as np
+import pytest
 
-
+@pytest.mark.long
 def test_can_fit_generated_data(trend_data):
     data, true_delta, n_changepoints = trend_data
     model = LinearTrend(n_changepoints=n_changepoints)

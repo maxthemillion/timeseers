@@ -1,8 +1,10 @@
 from timeseers import LogisticGrowth
 from timeseers.utils import MaxScaler
 import numpy as np
+import pytest
 
 
+@pytest.mark.long
 def test_can_fit_generated_data(logistic_growth_data):
     data, true_delta, n_changepoints = logistic_growth_data
     model = LogisticGrowth(capacity=1, n_changepoints=n_changepoints)
