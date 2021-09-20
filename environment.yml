@@ -1,0 +1,10 @@
+name: timeseers-dev
+channels:
+  - conda-forge
+dependencies:
+  - pymc3
+  - theano-pymc
+  - mkl
+  - arviz
+  - numpy
+  - pytest
