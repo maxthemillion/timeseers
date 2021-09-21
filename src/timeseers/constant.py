@@ -3,7 +3,6 @@ from timeseers.timeseries_model import TimeSeriesModel
 from timeseers.utils import add_subplot, get_group_definition
 import pymc3 as pm
 
-
 class Constant(TimeSeriesModel):
     def __init__(self, name: str = None, lower=0, upper=1, pool_cols=None, pool_type='complete'):
         self.pool_cols = pool_cols

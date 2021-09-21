@@ -3,7 +3,8 @@ import numpy as np
 from timeseers.utils import IdentityScaler
 import pytest
 
-@pytest.mark.long
+@pytest.mark.convergence
+@pytest.mark.slow
 def test_can_fit_generated_data(seasonal_data):
     data, true_beta, n_components = seasonal_data
     model = FourierSeasonality(n=n_components)

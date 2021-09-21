@@ -1,5 +1,5 @@
 test:
-	pytest -m "not long" -q -W ignore
+	pytest -m "not convergence" -q -W ignore
 
 test_all:
 	pytest
